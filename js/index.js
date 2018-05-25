@@ -171,7 +171,7 @@ let messageRender = (function () {
     let step = -1,//=>记录当前展示信息的索引
         total = $messageList.length + 1,//=>记录的是信息总条数(自己发一条所以加1)
         autoTimer = null,
-        interval = 1500;//=>记录信息相继出现的间隔时间
+        interval = 3000;//=>记录信息相继出现的间隔时间
 
     //=>展示信息
     let tt = 0;
@@ -208,7 +208,7 @@ let messageRender = (function () {
             transform: 'translateY(0)'
         }).one('transitionend', () => {
             //=>TRANSITION-END:监听当前元素TRASITION动画结束的事件(并且有几个样式属性改变，并且执行了过渡效果，事件就会被触发执行几次 =>用ONE方法做事件绑定,只会让其触发一次)
-            let str = '好的，马上介绍！',
+            let str = '我觉得有时候我还挺优秀的',
                 n = -1,
                 textTimer = null;
             textTimer = setInterval(() => {
